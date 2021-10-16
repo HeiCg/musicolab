@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HeiCg/musicolab/issues"
   },
-  "homepage": "https://github.com/HeiCg/musicolab#readme"
+  "homepage": "https://github.com/HeiCg/musicolab#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
