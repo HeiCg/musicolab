@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Giga&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #EAF1FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "logo title timer"
+    ".  status ."
+    ".  musics ."
+    ". submit .";
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr .2fr 5fr 1fr;
+    height: 90vh;
+    width: 60rem;
+}
+
+main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo { 
+    grid-area: logo; 
+}
+
+.title { 
+    grid-area: title; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > span {
+    font-family: 'Lexend Giga', sans-serif;
+    color: #27272D;
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid black
+}
+
+.timer {
+    font-family: 'Lexend Giga', sans-serif;
+    grid-area: timer; 
+}
+
+.timer div{
+    background-color: #2EB268;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.info-status {
+    grid-area: status; 
+    margin-top: 1.5rem;
+}
+
+.info-status span {
+    color: #3E3E4E;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.musics {
+    grid-area: musics; 
+    display: grid;
+    grid-template-areas: 
+        ". btn btn . "
+        ". btn btn ,";
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.winner {
+    display: none;
+}
+
+.btn {
+    border: 2px solid #1E2350;
+    background-color: #D9E3F4;
+    color: #1E2350;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 4.5rem;
+    width: 18rem;
+}
+
+.submit { grid-area: submit; }
+
+.btn-submit {
+    border: 2px solid #1E2350;
+    font-size: 1.5rem;
+    font-family: 'Lexend Giga', sans-serif;
+    padding: 1.2rem;
+    background-color: white;
+    border-radius: 0.8rem;
+}
+
+.circle {
+    border: 1px solid black;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3%;
+}
+
+/* efeitos */
+
+.btn:hover ,.btn-submit:hover{
+    color: #ffffff;
+    background-color: #1E2350;
+}
