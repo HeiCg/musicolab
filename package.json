@@ -1,0 +1,22 @@
+{
+  "name": "musicolab",
+  "version": "1.0.0",
+  "description": "Funtech Music Colab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeiCg/musicolab.git"
+  },
+  "author": "Funtech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeiCg/musicolab/issues"
+  },
+  "homepage": "https://github.com/HeiCg/musicolab#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
