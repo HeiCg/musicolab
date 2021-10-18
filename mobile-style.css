@@ -1,117 +1,144 @@
 main {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-areas: 
+  margin-top: 1rem;
+  display: grid;
+  grid-template-areas:
     ". title ."
     ". logo ."
     ". status ."
     ". musics ."
     ". submit ."
     ". timer .";
-    grid-template-columns: .4fr 8fr .5fr;
-    grid-template-rows: 0fr .5fr 0.5fr 5fr 1fr .5fr;
-    height: 89vh;
+  grid-template-columns: 0.4fr 8fr 0.5fr;
+  grid-template-rows: 0fr 0.5fr 0.5fr 5fr 1fr 0.5fr;
+  height: 89vh;
 }
 
 .info-status {
-    grid-area: status; 
-    margin-top: 1.6rem;
-    margin-bottom: 1rem;
+  grid-area: status;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .info-status span {
-    color: #3E3E4E;
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-} 
-
+  color: #3e3e4e;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .circle {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 3%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3%;
 }
 
 .timer {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.winner {
-    display: none;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn {
-    height: 3.5rem;
-    width: 14rem;
+  height: 3.5rem;
+  width: 14rem;
 }
 
-.title > span{
-    font-size: 2rem;
+.title > span {
+  font-size: 2rem;
 }
 
 .title {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .btn-submit {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-.timer div{
-    font-size: 1.5rem;
+.timer div {
+  font-size: 1.5rem;
 }
 
+.header-winner {
+  font-size: 1.4rem;
+}
+
+.name-winner {
+  font-size: 1.1rem;
+}
+
+.gif-winner {
+  width: 9.5rem;
+  top: -68px;
+}
 
 @media (max-width: 739px) {
-    .info-status > span {
-        color: #636377;
-    }
+  .none {
+    display: none;
+  }
 
-    .btn {
-        font-size: 1.3rem;
-    }
+  .winner {
+    width: 20rem;
+  }
 
-    .title > span {
-        font-size: 1.5rem;
-        padding-bottom: .5rem;
-    }
+  .img-winner {
+    width: 15rem;
+  }
 
-    .musics {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  .container-winner {
+    margin-left: 1rem;
+  }
 
-    .btn {
-        height: 3.5rem;
-        width: 16rem;
-    }
+  .info-status {
+    margin-bottom: 2rem;
+  }
 
-    .btn-submit {
-        width: 12rem;
-        height: 3.2rem;
-        padding: 0;
-    }
+  .info-status > span {
+    color: #636377;
+  }
 
-    .timer {
-        padding-top: 1rem;
-    }
+  .btn {
+    font-size: 1.3rem;
+  }
 
-    .timer > div {
-        font-size: 1.2rem;
-    }
+  .title > span {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .musics {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .btn {
+    height: 3.5rem;
+    width: 16rem;
+  }
+
+  .btn-submit {
+    width: 12rem;
+    height: 3.2rem;
+    padding: 0;
+  }
+
+  .timer {
+    padding-top: 1rem;
+  }
+
+  .timer > div {
+    font-size: 1.2rem;
+  }
 }
