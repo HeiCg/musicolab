@@ -11,7 +11,7 @@
       media="(max-width: 1110px)"
       href="./assets/css/mobile-style.css"
     />
-    <script type="text/javascript" src="index.js"></script>
+    <script src="https://kit.fontawesome.com/f5e970e968.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
@@ -19,18 +19,18 @@
         <div class="circle">Logo</div>
       </div>
       <div class="title">
-        <span>Nome do Evento</span>
+        <span class="title-txt">Nome do Evento</span>
       </div>
       <div class="timer">
         <div class="circle">
-          <span>30s</span>
+          <span class="timer-txt">30s</span>
         </div>
       </div>
       <div class="info-status">
-        <span>Votação Encerrada<br />A Música mais votada é...</span>
+        <span class="info-status-txt">Votação Encerrada<br />A Música mais votada é...</span>
       </div>
       <div class="none">
-        <img class="gif-winner" src="./assets/images/giphy.gif" alt="animated Crown GIF" />
+        <!--<img class="gif-winner" src="./assets/images/giphy.gif" alt="animated Crown GIF" />-->
         <div class="container-winner">
           <div class="header-winner">
             <span>Música 1</span>
@@ -42,14 +42,37 @@
         </div>
       </div>
       <div class="musics">
-        <button class="btn">Música 1</button>
-        <button class="btn">Música 2</button>
-        <button class="btn">Música 3</button>
-        <button class="btn">Música 4</button>
+        <input type="radio" name="musicas" id="musicas-1">
+        <label for="musicas-1" class="btn">
+          <span>Chopin</span>
+          <!-- <i class="fas fa-info "></i> -->
+        </label>
+
+        <input type="radio" name="musicas" id="musicas-2">
+        <label for="musicas-2" class="btn">
+          <span>Lindalva Cruz</span>
+          <!-- <i class="fas fa-info "></i> -->
+        </label>
+
+        <input type="radio" name="musicas" id="musicas-3">
+        <label for="musicas-3" class="btn">
+          <span>Gottschalk</span>
+          <!-- <i class="fas fa-info "></i> -->
+        </label>
+
+        <input type="radio" name="musicas" id="musicas-4">
+        <label for="musicas-4" class="btn">
+          <span>Zequinha de Abreu</span>
+          <!-- <i class="fas fa-info "></i> -->
+        </label>
       </div>
       <div class="submit">
         <button class="btn-submit">Confirmar</button>
       </div>
+      <div class="turnos">
+        <span class="turnos-txt">1/3</span>
+      </div>
     </main>
   </body>
+  <script src="./index.js"></script>
 </html>
