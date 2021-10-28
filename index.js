@@ -11,6 +11,68 @@ const timer = document.querySelector(".timer-txt").innerText = tempo_de_cada_vot
 const turnos = document.querySelector(".turnos-txt").innerText = "1/"+quantidade_de_turnos
 let buttons = document.getElementsByClassName("btn")
 
+let id = "";
+
+
+//função incial ao abrir a pagina
+window.onload = function onLoad(){
+    checkCookie();
+    console.log("ID Cookie: " + id);
+}
+
+//salvando o ID em um cookie
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+  
+function checkCookie() {
+    id = getCookie("id");
+    if (id != "") {
+      //id encontrado
+      console.log("ID encontrado: " + id);
+    }else{ //gera id
+        console.log("ID não encontrado, gerando um novo.");
+        id = geraID();
+        if (id != "" && id != null) {
+            setCookie("id", id, 365);
+        }
+    }
+}
+
+
+function geraID(){
+    var id=String.fromCharCode(Math.floor((Math.random()*25)+65));
+    do {                
+        var ascicode=Math.floor((Math.random()*42)+48); //(48 é 0 e 90 é Z (42-48 = 90)
+        if (ascicode<58 || ascicode>64){ //excluindo caracteres especiais
+            id+=String.fromCharCode(ascicode);    
+        }                
+    } while (id.length<32);
+    //console.log(id);
+    return (id);
+}
+
+
+
+//botoes
 function btn_musicas_info () {
     //let musica_selecionada = document.getElementsByClassName
     /*
